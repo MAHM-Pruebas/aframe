@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="drone" src="drone.glb"></a-asset-item>
+          </a-assets>
+        <a-sphere position="0 1 -5" radius="1" color="#EF2D5E">
+        <a-box position="0 1.5 0" rotation="0 0 0" color="#4CC3D9"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 1000">
+            </a-box>
+     ></a-box>
+      </a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-entity gltf-model="#drone" position="0 0 -2" rotation="0 0 0"
+            scale="3 3 3"></a-entity>
+      <a-entity movement-controls="fly: true">
+        <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+      </a-entity>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-entity light="type: directional; intensity: 0.6; color:#FFF"></a-entity>
+      <a-entity light="type: ambient; intensity: 1; color:#BBB"></a-entity>
+    </a-scene>
+  </body>
+</html>
