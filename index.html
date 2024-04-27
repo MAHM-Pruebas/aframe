@@ -5,12 +5,7 @@
   <body>
     <a-scene>
       <a-box position="1.5 1 -3" rotation="90 0 0" height="0.1" color="#D6AEEB">
-          <a-animation attribute="rotation" 
-            to="360 0 0"
-            repeat="indefinite"
-            dur="5000"
-            easing="linear">
-          </a-animation>
+          animation="property: rotation; to=360 0 0; lopp=true; dur=5000"          
       </a-box>
       <a-cylinder position="0 1 -3" radius="1" rotation="90 0 0" height="0.1" color="#0000FF"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#FF8000"></a-plane>
